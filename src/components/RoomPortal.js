@@ -10,6 +10,7 @@ export default function RoomPortal() {
         <Button type="primary" className="create-btn">
           Create
         </Button>
+        <p className="or-text">OR</p>
       </div>
     </>
   );

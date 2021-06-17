@@ -64,7 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  place-items: center;
+  place-items: start;
 }
 
 /* box content */
@@ -91,11 +91,20 @@ body {
   flex-direction: row;
   align-items: flex-start;
   padding: 5px 12px;
-  width: 80%;
+  margin-left: 3rem;
+  width: 70%;
   border: none;
 }
 
 .create-btn:hover {
   background-color: #d13891;
-  /* color: #ebeef0; */
+}
+
+.or-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  color: #59f8e8;
+  font-size: 1.5rem;
+  margin-left: 3rem;
 }
