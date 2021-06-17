@@ -8,6 +8,10 @@ body {
   background-color: #03191e;
 }
 
+.App {
+  margin: 2rem;
+}
+
 /* Header styles */
 .header-wrapper {
   margin: 1rem;
@@ -31,8 +35,67 @@ body {
 .sub-header {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 100;
   font-size: 1.5rem;
   margin: 0;
   color: #c4c4c4;
+}
+
+/* box styles */
+.box-back {
+  margin-top: 5rem;
+  width: 70%;
+  height: 15rem;
+  border: 4px solid #59f8e8;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.box-front {
+  margin-top: 9rem;
+  margin-left: 3rem;
+  background: #03191e;
+  z-index: 10;
+  width: 70%;
+  height: 15rem;
+  border: 4px solid #59f8e8;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+}
+
+/* box content */
+
+.rooms-title {
+  color: #c1cfda;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  margin: 0;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.create-btn {
+  font-family: Roboto;
+  font-size: 1.5rem;
+  background-color: #59f8e8;
+  color: #03191e;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 5px 12px;
+  width: 80%;
+  border: none;
+}
+
+.create-btn:hover {
+  background-color: #d13891;
+  /* color: #ebeef0; */
 }
