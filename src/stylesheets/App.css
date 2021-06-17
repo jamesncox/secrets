@@ -21,11 +21,11 @@ body {
   letter-spacing: 0.1em;
   margin: 0;
   color: #a682ff;
-  -webkit-text-fill-color: black;
+  -webkit-text-fill-color: #03191e;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #a682ff;
-  text-shadow: 5px 5px 10px #d138bf, -1px -1px 10px #d138bf, 3px 2px 6px #d138bf,
-    -1px -2px 5px #d138bf;
+  text-shadow: 5px 5px 10px #d138bf, -1px -1px 10px #d138bf, 3px 2px 6px #d1386b,
+    -1px -2px 5px #d13891;
 }
 
 .sub-header {
