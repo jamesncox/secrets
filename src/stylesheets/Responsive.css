@@ -6,4 +6,25 @@
   .sub-header {
     font-size: 2rem;
   }
+
+  .portal-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .portal-wrapper {
+    width: 33%;
+  }
+
+  .box-back {
+    height: 20rem;
+  }
+
+  .box-front {
+    margin-top: -16rem;
+    height: 20rem;
+  }
 }

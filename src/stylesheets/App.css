@@ -41,14 +41,20 @@ body {
   color: #c4c4c4;
 }
 
+.portal-wrapper {
+  /* position: absolute; */
+  margin-top: 5rem;
+  width: 100%;
+}
+
 /* back box styles */
 .box-back {
-  margin-top: 5rem;
-  width: 70%;
   height: 15rem;
   border: 4px solid #59f8e8;
   box-sizing: border-box;
-  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
 }
 
 .rooms-title {
@@ -65,20 +71,19 @@ body {
 
 /* back box sty;es */
 .box-front {
-  margin-top: 9rem;
+  margin-top: -11rem;
   margin-left: 3rem;
   background: #03191e;
   z-index: 10;
-  width: 70%;
   height: 15rem;
   border: 4px solid #59f8e8;
   box-sizing: border-box;
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   place-items: start;
   padding: 2rem;
+  position: sticky;
 }
 
 /* .front-content-wrapper {

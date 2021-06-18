@@ -3,7 +3,7 @@ import { RightOutlined } from "@ant-design/icons";
 
 export default function RoomPortal() {
   return (
-    <>
+    <div className="portal-wrapper">
       <div className="box-back">
         <h3 className="rooms-title">Rooms</h3>
       </div>
@@ -25,7 +25,6 @@ export default function RoomPortal() {
           </div>
         </form>
       </div>
-      {/* </div> */}
-    </>
+    </div>
   );
 }
