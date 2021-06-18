@@ -8,6 +8,10 @@ body {
   background-color: #03191e;
 }
 
+.App {
+  margin: 2rem;
+}
+
 /* Header styles */
 .header-wrapper {
   margin: 1rem;
@@ -21,18 +25,158 @@ body {
   letter-spacing: 0.1em;
   margin: 0;
   color: #a682ff;
-  -webkit-text-fill-color: black;
+  -webkit-text-fill-color: #03191e;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #a682ff;
-  text-shadow: 5px 5px 10px #d138bf, -1px -1px 10px #d138bf, 3px 2px 6px #d138bf,
-    -1px -2px 5px #d138bf;
+  text-shadow: 5px 5px 10px #d138bf, -1px -1px 10px #d138bf, 3px 2px 6px #d1386b,
+    -1px -2px 5px #d13891;
 }
 
 .sub-header {
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 100;
   font-size: 1.5rem;
   margin: 0;
   color: #c4c4c4;
+}
+
+.portal-wrapper {
+  /* position: absolute; */
+  margin-top: 5rem;
+  width: 100%;
+}
+
+/* back box styles */
+.box-back {
+  height: 15rem;
+  border: 4px solid #59f8e8;
+  background: #03191e;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  width: 90%;
+}
+
+.rooms-title {
+  color: #c1cfda;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  margin: 0;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+/* back box sty;es */
+.box-front {
+  margin-top: -11rem;
+  margin-left: 3rem;
+  background: #03191e;
+  z-index: 10;
+  height: 15rem;
+  border: 4px solid #59f8e8;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: start;
+  padding: 2rem;
+  position: sticky;
+}
+
+.create-btn {
+  font-family: Roboto;
+  font-size: 1.5rem;
+  background-color: #59f8e8;
+  color: #03191e;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 5px 12px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.create-btn:hover {
+  background-color: #f45b69;
+}
+
+.or-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  color: #59f8e8;
+  font-size: 1.5rem;
+}
+
+.id-form {
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  place-items: center;
+}
+
+.id-input {
+  border: 2px solid #59f8e8;
+  border-radius: 2px;
+  background: #03191e;
+  height: 2.25rem;
+  color: #59f8e8;
+  text-indent: 10px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #59f8e8;
+  text-indent: 12px;
+  font-size: 1rem;
+}
+
+.id-btn {
+  background-color: #f45b69;
+  border: none;
+  border-radius: 2px;
+  height: 2.6rem;
+  width: 3rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.id-btn:hover {
+  background-color: #59f8e8;
+}
+
+/* Small dot grid */
+.small-grid-outer {
+  overflow: hidden;
+  position: absolute;
+  bottom: 10rem;
+  right: 0rem;
+}
+
+.small-dot-grid {
+  z-index: -10;
+  position: relative;
+}
+
+/* Large dot grid */
+.large-grid-outer {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+}
+
+.large-dot-grid {
+  z-index: -10;
+  position: relative;
 }

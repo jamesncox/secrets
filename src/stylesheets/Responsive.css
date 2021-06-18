@@ -6,4 +6,63 @@
   .sub-header {
     font-size: 2rem;
   }
+
+  .portal-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .small-grid-outer {
+    bottom: 15rem;
+    right: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .small-grid-outer {
+    display: none;
+  }
+
+  .large-grid-outer {
+    display: block;
+    bottom: 5rem;
+    right: 5rem;
+  }
+
+  .box-front {
+    padding: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .large-grid-outer {
+    bottom: 5rem;
+    right: 10rem;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .portal-wrapper {
+    width: 33%;
+  }
+
+  .box-back {
+    height: 20rem;
+  }
+
+  .box-front {
+    margin-top: -16rem;
+    height: 20rem;
+  }
+
+  .small-grid-outer {
+    display: none;
+  }
+
+  .large-grid-outer {
+    display: block;
+    bottom: 5rem;
+    right: 20rem;
+  }
 }
