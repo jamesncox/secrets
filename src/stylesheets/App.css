@@ -87,11 +87,6 @@ body {
   position: sticky;
 }
 
-/* .front-content-wrapper {
-  padding: 2rem;
-  width: 100%;
-} */
-
 .create-btn {
   font-family: Roboto;
   font-size: 1.5rem;
@@ -123,10 +118,9 @@ body {
   width: 100%;
 }
 
-.form-wrapper {
+.input-wrapper {
   display: flex;
   place-items: center;
-  /* width: 100%; */
 }
 
 .id-input {
@@ -164,7 +158,7 @@ input::placeholder {
 .small-grid-outer {
   overflow: hidden;
   position: absolute;
-  bottom: 20rem;
+  bottom: 10rem;
   right: 0rem;
 }
 
