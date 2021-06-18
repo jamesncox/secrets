@@ -51,6 +51,7 @@ body {
 .box-back {
   height: 15rem;
   border: 4px solid #59f8e8;
+  background: #03191e;
   box-sizing: border-box;
   left: 0;
   top: 0;
@@ -157,4 +158,31 @@ input::placeholder {
 
 .id-btn:hover {
   background-color: #59f8e8;
+}
+
+/* Small dot grid */
+.small-grid-outer {
+  overflow: hidden;
+  position: absolute;
+  bottom: 20rem;
+  right: 0rem;
+}
+
+.small-dot-grid {
+  z-index: -10;
+  position: relative;
+}
+
+/* Large dot grid */
+.large-grid-outer {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+}
+
+.large-dot-grid {
+  z-index: -10;
+  position: relative;
 }

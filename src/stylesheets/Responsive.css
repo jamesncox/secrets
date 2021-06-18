@@ -12,6 +12,26 @@
     margin-right: auto;
     width: 50%;
   }
+
+  .small-grid-outer {
+    bottom: 15rem;
+    right: 5rem;
+  }
+}
+
+/* @media only screen and (min-width: 768px) {
+} */
+
+@media only screen and (min-width: 1024px) {
+  .small-grid-outer {
+    display: none;
+  }
+
+  .large-grid-outer {
+    display: block;
+    bottom: 5rem;
+    right: 10rem;
+  }
 }
 
 @media only screen and (min-width: 1536px) {
@@ -26,5 +46,11 @@
   .box-front {
     margin-top: -16rem;
     height: 20rem;
+  }
+
+  .large-grid-outer {
+    display: block;
+    bottom: 5rem;
+    right: 20rem;
   }
 }
