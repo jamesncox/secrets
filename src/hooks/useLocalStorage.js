@@ -15,7 +15,6 @@ export default function useLocalStorage(key, initialValue) {
   });
 
   useEffect(() => {
-    console.log(value);
     if (value !== undefined) {
       localStorage.setItem(prefixedKey, JSON.stringify(value));
     }
