@@ -12,6 +12,16 @@ body {
   margin: 2rem;
 }
 
+.App::-moz-selection {
+  color: #59f8e8;
+  background: #a682ff;
+}
+
+::selection {
+  color: #59f8e8;
+  background: #a682ff;
+}
+
 /* Header styles */
 .header-wrapper {
   margin: 1rem;
