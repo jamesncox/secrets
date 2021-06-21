@@ -10,7 +10,10 @@ export default function RoomPortal({ onIdSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onIdSubmit(input);
+    if (input.length === 36) {
+      onIdSubmit(input);
+      setInput("");
+    }
   };
 
   const createRoomID = () => {
@@ -34,6 +37,7 @@ export default function RoomPortal({ onIdSubmit }) {
             <input
               placeholder="Enter ID"
               className="id-input"
+              value={input}
               onChange={handleOnChange}
             />
 
