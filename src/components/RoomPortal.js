@@ -1,6 +1,22 @@
-import { Button, Input } from "antd";
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
-export default function RoomPortal() {
+export default function RoomPortal({ onIdSubmit }) {
+  const [input, setInput] = useState("");
+
+  const handleOnChange = (e) => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onIdSubmit(input);
+  };
+
+  const createRoomID = () => {
+    onIdSubmit(uuidv4());
+  };
+
   return (
     <div className="portal-wrapper">
       <div className="box-back">
@@ -8,16 +24,20 @@ export default function RoomPortal() {
       </div>
 
       <div className="box-front">
-        <Button type="primary" className="create-btn">
+        <button type="primary" className="create-btn" onClick={createRoomID}>
           Create
-        </Button>
+        </button>
         <p className="or-text">OR</p>
 
-        <form name="basic" className="id-form">
+        <form name="basic" className="id-form" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <Input placeholder="Enter ID" className="id-input" />
+            <input
+              placeholder="Enter ID"
+              className="id-input"
+              onChange={handleOnChange}
+            />
 
-            <Button type="primary" htmlType="submit" className="id-btn">
+            <button className="id-btn" type="submit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -31,7 +51,7 @@ export default function RoomPortal() {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </Button>
+            </button>
           </div>
         </form>
       </div>

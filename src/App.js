@@ -5,12 +5,15 @@ import Header from "./components/Header";
 import RoomPortal from "./components/RoomPortal";
 import LargeDotGrid from "./components/LargeDotGrid";
 import SmallDotGrid from "./components/SmallDotGrid";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 function App() {
+  const [id, setId] = useLocalStorage("id");
   return (
     <div className="App">
       <Header />
-      <RoomPortal />
+      {/* {id ? null : <RoomPortal onIdSubmit={(id, setId)} />} */}
+      <RoomPortal onIdSubmit={(id, setId)} />
       <SmallDotGrid />
       <LargeDotGrid />
     </div>
