@@ -18,7 +18,7 @@ function App() {
       <Header />
       {id ? null : <RoomPortal onIdSubmit={(id, setId)} />}
       {id && name === "" ? <NamePortal setName={setName} id={id} /> : null}
-      {id && name !== "" ? <ChatPortal id={id} /> : null}
+      {id && name !== "" ? <ChatPortal id={id} name={name} /> : null}
       <SmallDotGrid />
       <LargeDotGrid />
     </div>

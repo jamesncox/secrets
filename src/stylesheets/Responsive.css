@@ -39,6 +39,10 @@
   textarea::-webkit-scrollbar-thumb {
     background-color: #59f8e87a;
   }
+
+  .display-name {
+    font-size: 1.25rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

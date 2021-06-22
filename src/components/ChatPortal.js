@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-export default function ChatPortal() {
+export default function ChatPortal({ id, name }) {
   const [input, setInput] = useState("");
   const textareaRef = useRef(null);
 
@@ -18,6 +18,7 @@ export default function ChatPortal() {
     <div className="chat-portal-wrapper">
       <div className="id-name-wrapper">
         <button className="show-id-btn">Room ID</button>
+        <p className="display-name">Hello, {name}!</p>
       </div>
       <div className="box-back-chat">
         <p className="receive-bubble receive-carrot">
