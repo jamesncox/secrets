@@ -15,7 +15,6 @@ function App() {
       <Header />
       {id ? null : <RoomPortal onIdSubmit={(id, setId)} />}
       {id ? <ChatPortal id={id} /> : null}
-      {/* <RoomPortal onIdSubmit={(id, setId)} /> */}
       <SmallDotGrid />
       <LargeDotGrid />
     </div>
