@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import "./stylesheets/App.css";
 import "./stylesheets/Responsive.css";
 import Header from "./components/Header";
@@ -18,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
       {id ? null : <RoomPortal setId={(id, setId)} />}
-      {(id && name === "") || name === undefined ? (
+      {id && name === undefined ? (
         <NamePortal setName={setName} id={id} />
       ) : null}
       {id && name !== "" && name !== undefined ? (

@@ -171,7 +171,7 @@ input::placeholder {
   z-index: 10;
 }
 
-.id-name-wrapper {
+.info-name-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -195,22 +195,31 @@ input::placeholder {
   flex-direction: column-reverse;
 }
 
-.show-id-btn {
+.info-btn {
   font-family: Roboto;
   font-size: 1rem;
+  font-weight: bold;
   background-color: #59f8e8;
   color: #03191e;
   border-radius: 2px;
-  padding: 5px 12px;
-  width: 7rem;
+  padding: 5px 16px;
   height: 50%;
   border: none;
   cursor: pointer;
   margin-bottom: 1rem;
 }
 
-.show-id-btn:hover {
+.info-btn:hover {
   background-color: #f45b69;
+}
+
+.info-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.users-icon {
+  height: 1.7rem;
 }
 
 /* message styles */
