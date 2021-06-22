@@ -172,6 +172,7 @@ input::placeholder {
 }
 
 .box-back-chat {
+  overflow: auto;
   border: 4px solid #59f8e8;
   height: 60vh;
   box-sizing: border-box;
@@ -179,7 +180,6 @@ input::placeholder {
   top: 0;
   display: flex;
   flex-direction: column-reverse;
-  /* align-items: end; */
 }
 
 .show-id-btn {

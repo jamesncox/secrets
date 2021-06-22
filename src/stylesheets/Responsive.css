@@ -23,6 +23,14 @@
     bottom: 15rem;
     right: 5rem;
   }
+
+  .box-back-chat::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+
+  .box-back-chat::-webkit-scrollbar-thumb {
+    background-color: #59f8e87a;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

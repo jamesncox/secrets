@@ -19,8 +19,15 @@ export default function ChatPortal() {
           I was teaching my friend how to twerk and we accidentally knocked over
           mom’s favorite lamp 😭😭😭
         </p>
-
         <p className="receive-bubble">Hey what happened to the lamp?</p>
+        <p className="send-bubble">
+          I was teaching my friend how to twerk and we accidentally knocked over
+          mom’s favorite lamp 😭😭😭
+        </p>
+        <p className="receive-bubble">
+          You know I have to tell her! She is going to blame me and I have plans
+          tonight!
+        </p>
       </div>
       <form name="basic" className="message-form">
         <div className="input-wrapper">
