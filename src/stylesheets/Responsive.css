@@ -7,10 +7,16 @@
     font-size: 2rem;
   }
 
-  .portal-wrapper {
+  .room-portal-wrapper {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+  }
+
+  .chat-portal-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
   }
 
   .small-grid-outer {
@@ -43,8 +49,12 @@
 }
 
 @media only screen and (min-width: 1536px) {
-  .portal-wrapper {
+  .room-portal-wrapper {
     width: 33%;
+  }
+
+  .chat-portal-wrapper {
+    width: 50%;
   }
 
   .box-back {
