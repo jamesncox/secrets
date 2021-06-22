@@ -10,7 +10,18 @@ export default function ChatPortal() {
   return (
     <div className="chat-portal-wrapper">
       <button className="show-id-btn">Room ID</button>
-      <div className="box-back-chat"></div>
+      <div className="box-back-chat">
+        <p className="receive-bubble">
+          You know I have to tell her! She is going to blame me and I have plans
+          tonight!
+        </p>
+        <p className="send-bubble">
+          I was teaching my friend how to twerk and we accidentally knocked over
+          mom’s favorite lamp 😭😭😭
+        </p>
+
+        <p className="receive-bubble">Hey what happened to the lamp?</p>
+      </div>
       <form name="basic" className="message-form">
         <div className="input-wrapper">
           <input
