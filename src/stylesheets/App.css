@@ -208,7 +208,7 @@ input::placeholder {
 
 .message-wrapper {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 
 textarea {
