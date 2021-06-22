@@ -7,15 +7,37 @@
     font-size: 2rem;
   }
 
-  .portal-wrapper {
+  .room-portal-wrapper {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
   }
 
+  .chat-portal-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+
   .small-grid-outer {
     bottom: 15rem;
     right: 5rem;
+  }
+
+  .box-back-chat::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+
+  .box-back-chat::-webkit-scrollbar-thumb {
+    background-color: #59f8e87a;
+  }
+
+  textarea::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #59f8e87a;
   }
 }
 
@@ -33,6 +55,16 @@
   .box-front {
     padding: 5rem;
   }
+
+  .receive-bubble {
+    font-size: 1.5rem;
+    width: 50%;
+  }
+
+  .send-bubble {
+    font-size: 1.5rem;
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -43,8 +75,12 @@
 }
 
 @media only screen and (min-width: 1536px) {
-  .portal-wrapper {
+  .room-portal-wrapper {
     width: 33%;
+  }
+
+  .chat-portal-wrapper {
+    width: 50%;
   }
 
   .box-back {
