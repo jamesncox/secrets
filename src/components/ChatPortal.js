@@ -11,24 +11,26 @@ export default function ChatPortal() {
     <div className="chat-portal-wrapper">
       <button className="show-id-btn">Room ID</button>
       <div className="box-back-chat">
-        <p className="receive-bubble">
+        <p className="receive-bubble receive-carrot">
           You know I have to tell her! She is going to blame me and I have plans
           tonight!
         </p>
         <p className="receive-name">Stacie</p>
-        <p className="send-bubble">
+        <p className="send-bubble send-carrot">
           I was teaching my friend how to twerk and we accidentally knocked over
           mom’s favorite lamp 😭😭😭
         </p>
         <p className="send-name">You</p>
-        <p className="receive-bubble">What happened to the lamp?</p>
+        <p className="receive-bubble receive-carrot">
+          What happened to the lamp?
+        </p>
         <p className="receive-name">Stacie</p>
-        <p className="send-bubble">
+        <p className="send-bubble send-carrot">
           Ooookay. You can always ask me anything and I promise I won't get mad,
           but now I'm kind of worried.
         </p>
         <p className="send-name">You</p>
-        <p className="receive-bubble">
+        <p className="receive-bubble receive-carrot">
           Before you get mad, I've got to ask you something, but promise you
           won't get mad at me!
         </p>

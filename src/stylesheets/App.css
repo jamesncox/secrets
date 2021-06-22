@@ -231,6 +231,20 @@ input::placeholder {
   padding: 1rem;
   width: 60%;
   margin-left: 1rem;
+  position: relative;
+}
+
+.receive-carrot:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #f45b69;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #f45b69;
+  border-bottom: 10px solid transparent;
+  left: 19px;
+  bottom: -19px;
 }
 
 .send-bubble {
@@ -241,6 +255,20 @@ input::placeholder {
   width: 60%;
   margin-right: 1rem;
   margin-left: auto;
+  position: relative;
+}
+
+.send-carrot:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #a682ff;
+  border-top: 10px solid #a682ff;
+  border-bottom: 10px solid transparent;
+  right: 19px;
+  bottom: -19px;
 }
 
 .receive-name {
