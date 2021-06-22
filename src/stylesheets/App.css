@@ -181,6 +181,7 @@ input::placeholder {
   color: #a682ff;
   margin-left: 1rem;
   text-align: right;
+  font-size: 1.25rem;
 }
 
 .box-back-chat {
@@ -343,9 +344,9 @@ textarea::placeholder {
 }
 
 /* name input portal styles */
-
 .teal-id-header {
   margin: 0;
+  margin-bottom: -0.5rem;
   color: #59f8e8;
   font-size: 1.25rem;
 }
@@ -357,13 +358,6 @@ textarea::placeholder {
 .name-input-wrapper {
   display: flex;
   align-items: center;
-  margin-top: 0.5rem;
-}
-
-.teal-name-header {
-  margin: 0;
-  color: #59f8e8;
-  font-size: 1.25rem;
 }
 
 .name-input {
@@ -375,4 +369,24 @@ textarea::placeholder {
   text-indent: 10px;
   width: 100%;
   font-size: 1rem;
+}
+
+.char-count-wrapper {
+  margin-top: -1rem;
+  margin-bottom: -0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teal-name-header {
+  margin: 0;
+  margin-right: 1rem;
+  color: #59f8e8;
+  font-size: 1.25rem;
+}
+
+.char-count {
+  color: #59f8e8;
+  font-size: 1.25rem;
 }

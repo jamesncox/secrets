@@ -2,9 +2,11 @@ import { useState } from "react";
 
 export default function NamePortal({ id, setName }) {
   const [input, setInput] = useState("");
+  const [chars, setChars] = useState(0);
 
   const handleOnChange = (e) => {
     setInput(e.target.value);
+    setChars(e.target.value.length);
   };
 
   const handleSubmit = (e) => {
@@ -23,9 +25,12 @@ export default function NamePortal({ id, setName }) {
         <p className="id-text">{id}</p>
 
         <form name="basic" className="id-form" onSubmit={handleSubmit}>
-          <label htmlFor="name" className="teal-name-header">
-            Your Name
-          </label>
+          <div className="char-count-wrapper">
+            <label htmlFor="name" className="teal-name-header">
+              Your Name
+            </label>
+            <p className="char-count">{chars}/20</p>
+          </div>
           <div className="name-input-wrapper">
             <input
               placeholder="i.e. Billie Jean"
