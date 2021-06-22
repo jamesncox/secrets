@@ -11,7 +11,7 @@ export default function NamePortal({ id, setName }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setName(input);
+    setName(input.trim());
   };
 
   return (

@@ -12,13 +12,16 @@ import useLocalStorage from "./hooks/useLocalStorage";
 
 function App() {
   const [id, setId] = useLocalStorage("id");
-  const [name, setName] = useState("");
+  const [name, setName] = useLocalStorage("name");
+
   return (
     <div className="App">
       <Header />
-      {id ? null : <RoomPortal onIdSubmit={(id, setId)} />}
-      {id && name === "" ? <NamePortal setName={setName} id={id} /> : null}
-      {id && name !== "" ? (
+      {id ? null : <RoomPortal setId={(id, setId)} />}
+      {(id && name === "") || name === undefined ? (
+        <NamePortal setName={setName} id={id} />
+      ) : null}
+      {id && name !== "" && name !== undefined ? (
         <ChatPortal id={id} name={name} setName={setName} />
       ) : null}
       <SmallDotGrid />

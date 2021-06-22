@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-export default function RoomPortal({ onIdSubmit }) {
+export default function RoomPortal({ setId }) {
   const [input, setInput] = useState("");
 
   const handleOnChange = (e) => {
@@ -11,13 +11,13 @@ export default function RoomPortal({ onIdSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (input.length === 36) {
-      onIdSubmit(input);
+      setId(input);
       setInput("");
     }
   };
 
   const createRoomID = () => {
-    onIdSubmit(uuidv4());
+    setId(uuidv4());
   };
 
   return (

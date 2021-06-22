@@ -13,6 +13,7 @@ export default function ChatPortal({ id, name, setName }) {
   const handleOnChange = (e) => {
     setInput(e.target.value);
   };
+
   return (
     <div className="chat-portal-wrapper">
       <div className="id-name-wrapper">
