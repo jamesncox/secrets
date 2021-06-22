@@ -16,7 +16,9 @@ export default function ChatPortal() {
 
   return (
     <div className="chat-portal-wrapper">
-      <button className="show-id-btn">Room ID</button>
+      <div className="id-name-wrapper">
+        <button className="show-id-btn">Room ID</button>
+      </div>
       <div className="box-back-chat">
         <p className="receive-bubble receive-carrot">
           You know I have to tell her! She is going to blame me and I have plans

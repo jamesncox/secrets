@@ -328,3 +328,38 @@ textarea::placeholder {
 .large-dot-grid {
   position: relative;
 }
+
+/* name input portal styles */
+
+.teal-id-header {
+  margin: 0;
+  color: #59f8e8;
+  font-size: 1.25rem;
+}
+
+.id-text {
+  color: #c4c4c4;
+}
+
+.name-input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.teal-name-header {
+  margin: 0;
+  color: #59f8e8;
+  font-size: 1.25rem;
+}
+
+.name-input {
+  border: 2px solid #59f8e8;
+  border-radius: 2px;
+  background: #03191e;
+  height: 2.25rem;
+  color: #59f8e8;
+  text-indent: 10px;
+  width: 100%;
+  font-size: 1rem;
+}
