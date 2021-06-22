@@ -206,10 +206,15 @@ input::placeholder {
   margin-bottom: 5rem;
 }
 
+.message-wrapper {
+  display: flex;
+  align-items: start;
+}
+
 textarea {
   padding: 0.2rem;
   resize: none;
-  min-height: 2.25rem;
+  min-height: 2rem;
   max-height: 6rem;
 }
 
@@ -226,6 +231,7 @@ textarea::placeholder {
   border-radius: 2px;
   padding: 5px 12px;
   width: 7rem;
+  height: 3rem;
   border: none;
   cursor: pointer;
   margin-left: 1rem;
@@ -236,7 +242,6 @@ textarea::placeholder {
 }
 
 /* message bubble styles */
-
 .receive-bubble {
   border-radius: 1rem;
   background-color: #f45b69;

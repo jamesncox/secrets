@@ -45,7 +45,7 @@ export default function ChatPortal() {
       </div>
 
       <form name="basic" className="message-form">
-        <div className="input-wrapper">
+        <div className="message-wrapper">
           <textarea
             placeholder="Your message..."
             className="id-input"
