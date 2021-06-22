@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-export default function ChatPortal({ id, name }) {
+export default function ChatPortal({ id, name, setName }) {
   const [input, setInput] = useState("");
   const textareaRef = useRef(null);
 
@@ -13,12 +13,11 @@ export default function ChatPortal({ id, name }) {
   const handleOnChange = (e) => {
     setInput(e.target.value);
   };
-
   return (
     <div className="chat-portal-wrapper">
       <div className="id-name-wrapper">
         <button className="show-id-btn">Room ID</button>
-        <p className="display-name">Hello, {name}!</p>
+        <p className="display-name">Hi, {name}</p>
       </div>
       <div className="box-back-chat">
         <p className="receive-bubble receive-carrot">

@@ -31,6 +31,7 @@ export default function NamePortal({ id, setName }) {
               placeholder="i.e. Billie Jean"
               id="name"
               className="name-input"
+              maxLength="20"
               value={input}
               onChange={handleOnChange}
             />
