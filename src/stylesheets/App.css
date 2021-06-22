@@ -9,7 +9,9 @@ body {
 }
 
 .App {
-  margin: 2rem;
+  margin: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .App::-moz-selection {
@@ -163,23 +165,21 @@ input::placeholder {
 
 /* chat portal box styles */
 .chat-portal-wrapper {
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 100%;
-  height: 60vh;
+  background: #03191ee3;
+  z-index: 10;
 }
 
 .box-back-chat {
   border: 4px solid #59f8e8;
-  height: 100%;
-  background: #03191e;
+  height: 60vh;
   box-sizing: border-box;
   left: 0;
   top: 0;
-  width: 95%;
 }
 
 .show-id-btn {
-  margin-top: 1rem;
   font-family: Roboto;
   font-size: 1rem;
   background-color: #59f8e8;
@@ -189,28 +189,34 @@ input::placeholder {
   width: 7rem;
   border: none;
   cursor: pointer;
-  margin-left: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .show-id-btn:hover {
   background-color: #f45b69;
 }
 
-.box-front-chat {
-  margin-top: -26.5rem;
+/* message styles */
+.message-form {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.send-btn {
+  font-family: Roboto;
+  font-size: 1.5rem;
+  background-color: #59f8e8;
+  color: #03191e;
+  border-radius: 2px;
+  padding: 5px 12px;
+  width: 7rem;
+  border: none;
+  cursor: pointer;
   margin-left: 1rem;
-  height: 100%;
-  /* width: 90%; */
-  background: #03191e;
-  z-index: 10;
-  border: 4px solid #59f8e8;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: start;
-  padding: 2rem;
-  position: sticky;
+}
+
+.send-btn:hover {
+  background-color: #f45b69;
 }
 
 /* Small dot grid */
@@ -219,10 +225,10 @@ input::placeholder {
   position: absolute;
   bottom: 10rem;
   right: 0rem;
+  z-index: -10;
 }
 
 .small-dot-grid {
-  z-index: -10;
   position: relative;
 }
 
@@ -233,9 +239,9 @@ input::placeholder {
   position: absolute;
   bottom: 0rem;
   right: 0rem;
+  z-index: -10;
 }
 
 .large-dot-grid {
-  z-index: -10;
   position: relative;
 }
