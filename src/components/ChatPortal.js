@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function ChatPortal() {
   const [input, setInput] = useState("");
+  const textareaRef = useRef(null);
+
+  useEffect(() => {
+    textareaRef.current.style.height = "0px";
+    const scrollHeight = textareaRef.current.scrollHeight;
+    textareaRef.current.style.height = scrollHeight + "px";
+  }, [input]);
 
   const handleOnChange = (e) => {
     setInput(e.target.value);
@@ -36,15 +43,17 @@ export default function ChatPortal() {
         </p>
         <p className="receive-name">Stacie</p>
       </div>
+
       <form name="basic" className="message-form">
         <div className="input-wrapper">
-          <input
+          <textarea
             placeholder="Your message..."
             className="id-input"
             value={input}
             onChange={handleOnChange}
+            ref={textareaRef}
+            // value={currentValue}
           />
-
           <button className="send-btn" type="submit">
             Send
           </button>

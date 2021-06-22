@@ -203,6 +203,19 @@ input::placeholder {
 .message-form {
   width: 100%;
   margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+textarea {
+  padding: 0.2rem;
+  resize: none;
+  min-height: 2.25rem;
+  max-height: 6rem;
+}
+
+textarea::placeholder {
+  color: #59f8e8;
+  font-size: 1rem;
 }
 
 .send-btn {
@@ -239,12 +252,12 @@ input::placeholder {
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid #f45b69;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #f45b69;
-  border-bottom: 10px solid transparent;
+  border-left: 8px solid #f45b69;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #f45b69;
+  border-bottom: 8px solid transparent;
   left: 19px;
-  bottom: -19px;
+  bottom: -15px;
 }
 
 .send-bubble {
@@ -263,12 +276,12 @@ input::placeholder {
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid transparent;
-  border-right: 10px solid #a682ff;
-  border-top: 10px solid #a682ff;
-  border-bottom: 10px solid transparent;
+  border-left: 8px solid transparent;
+  border-right: 8px solid #a682ff;
+  border-top: 8px solid #a682ff;
+  border-bottom: 8px solid transparent;
   right: 19px;
-  bottom: -19px;
+  bottom: -15px;
 }
 
 .receive-name {

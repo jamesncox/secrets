@@ -31,6 +31,14 @@
   .box-back-chat::-webkit-scrollbar-thumb {
     background-color: #59f8e87a;
   }
+
+  textarea::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #59f8e87a;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
