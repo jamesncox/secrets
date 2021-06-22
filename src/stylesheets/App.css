@@ -171,6 +171,19 @@ input::placeholder {
   z-index: 10;
 }
 
+.info-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.display-name {
+  color: #a682ff;
+  margin-left: 1rem;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
 .box-back-chat {
   overflow: auto;
   border: 4px solid #59f8e8;
@@ -182,21 +195,31 @@ input::placeholder {
   flex-direction: column-reverse;
 }
 
-.show-id-btn {
+.info-btn {
   font-family: Roboto;
   font-size: 1rem;
+  font-weight: bold;
   background-color: #59f8e8;
   color: #03191e;
   border-radius: 2px;
-  padding: 5px 12px;
-  width: 7rem;
+  padding: 5px 16px;
+  height: 50%;
   border: none;
   cursor: pointer;
   margin-bottom: 1rem;
 }
 
-.show-id-btn:hover {
+.info-btn:hover {
   background-color: #f45b69;
+}
+
+.info-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.users-icon {
+  height: 1.7rem;
 }
 
 /* message styles */
@@ -327,4 +350,52 @@ textarea::placeholder {
 
 .large-dot-grid {
   position: relative;
+}
+
+/* name input portal styles */
+.teal-id-header {
+  margin: 0;
+  margin-bottom: -0.5rem;
+  color: #59f8e8;
+  font-size: 1.25rem;
+}
+
+.id-text {
+  color: #c4c4c4;
+}
+
+.name-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.name-input {
+  border: 2px solid #59f8e8;
+  border-radius: 2px;
+  background: #03191e;
+  height: 2.25rem;
+  color: #59f8e8;
+  text-indent: 10px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.char-count-wrapper {
+  margin-top: -1rem;
+  margin-bottom: -0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teal-name-header {
+  margin: 0;
+  margin-right: 1rem;
+  color: #59f8e8;
+  font-size: 1.25rem;
+}
+
+.char-count {
+  color: #59f8e8;
+  font-size: 1.25rem;
 }
