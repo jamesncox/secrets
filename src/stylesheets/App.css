@@ -12,6 +12,7 @@ body {
   margin: 0;
   margin-left: 2rem;
   margin-right: 2rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .App::-moz-selection {
@@ -45,7 +46,6 @@ body {
 }
 
 .sub-header {
-  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 1.5rem;
@@ -71,7 +71,6 @@ body {
 
 .rooms-title {
   color: #c1cfda;
-  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
@@ -97,7 +96,6 @@ body {
 }
 
 .create-btn {
-  font-family: Roboto;
   font-size: 1.5rem;
   background-color: #59f8e8;
   color: #03191e;
@@ -116,7 +114,6 @@ body {
 }
 
 .or-text {
-  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   color: #59f8e8;
@@ -174,14 +171,31 @@ input::placeholder {
 .info-name-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  /* margin-bottom: 0.5rem; */
+}
+
+.info-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #59f8e8;
+  color: #03191e;
+  border-radius: 2px;
+  padding: 5px 16px;
+  height: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.info-btn:hover {
+  background-color: #f45b69;
 }
 
 .display-name {
   color: #a682ff;
   margin-left: 1rem;
+  font-size: 1.1rem;
   text-align: right;
-  font-size: 1.25rem;
 }
 
 .box-back-chat {
@@ -193,24 +207,6 @@ input::placeholder {
   top: 0;
   display: flex;
   flex-direction: column-reverse;
-}
-
-.info-btn {
-  font-family: Roboto;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #59f8e8;
-  color: #03191e;
-  border-radius: 2px;
-  padding: 5px 16px;
-  height: 50%;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 1rem;
-}
-
-.info-btn:hover {
-  background-color: #f45b69;
 }
 
 .info-wrapper {
@@ -247,7 +243,6 @@ textarea::placeholder {
 }
 
 .send-btn {
-  font-family: Roboto;
   font-size: 1.5rem;
   background-color: #59f8e8;
   color: #03191e;
@@ -491,7 +486,6 @@ textarea::placeholder {
 .signout-btn {
   margin-top: auto;
   width: 100%;
-  font-family: Roboto;
   font-size: 1rem;
   font-weight: bold;
   background-color: #59f8e8;
