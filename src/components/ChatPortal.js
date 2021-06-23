@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import Popup from "reactjs-popup";
 
 export default function ChatPortal({ id, name, setName }) {
   const [input, setInput] = useState("");
@@ -14,9 +15,9 @@ export default function ChatPortal({ id, name, setName }) {
     setInput(e.target.value);
   };
 
-  return (
-    <div className="chat-portal-wrapper">
-      <div className="info-name-wrapper">
+  const Modal = () => (
+    <Popup
+      trigger={
         <button className="info-btn">
           <div className="info-wrapper">
             <svg
@@ -35,6 +36,20 @@ export default function ChatPortal({ id, name, setName }) {
             </svg>
           </div>
         </button>
+      }
+      modal
+    >
+      <div>
+        <h3 className="room-id">Room ID</h3>
+        <p className="id-text">{id}</p>
+      </div>
+    </Popup>
+  );
+
+  return (
+    <div className="chat-portal-wrapper">
+      <div className="info-name-wrapper">
+        {Modal()}
         <p className="display-name">Hi, {name}</p>
       </div>
       <div className="box-back-chat">
