@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
       {id ? null : <RoomPortal setId={(id, setId)} />}
-      {id && name === undefined ? (
+      {(id && name === undefined) || name === "" ? (
         <NamePortal setName={setName} id={id} />
       ) : null}
       {id && name !== "" && name !== undefined ? (

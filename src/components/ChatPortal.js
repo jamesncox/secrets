@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import InfoModal from './InfoModal'
+import InfoModal from "./InfoModal";
 
 export default function ChatPortal({ id, name, setName }) {
   const [input, setInput] = useState("");
@@ -18,7 +18,7 @@ export default function ChatPortal({ id, name, setName }) {
   return (
     <div className="chat-portal-wrapper">
       <div className="info-name-wrapper">
-        <InfoModal id={id} name={name} />
+        <InfoModal id={id} name={name} setName={setName} />
         <p className="display-name">Hi, {name}</p>
       </div>
       <div className="box-back-chat">

@@ -1,9 +1,23 @@
 import { useRef, useState, useEffect } from "react";
 import Popup from "reactjs-popup";
 
-export default function InfoModal({ id, name }) {
+export default function InfoModal({ id, name, setName }) {
   const idRef = useRef(null);
   const [copySuccess, setCopySuccess] = useState(false);
+  const [input, setInput] = useState("");
+  const [chars, setChars] = useState(0);
+
+  const handleOnChange = (e) => {
+    setInput(e.target.value);
+    setChars(e.target.value.length);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (input !== "") {
+      setName(input.trim());
+    }
+  };
 
   useEffect(() => {
     return () => {
@@ -99,6 +113,40 @@ export default function InfoModal({ id, name }) {
         <p className="id-text" ref={idRef}>
           {id}
         </p>
+        <form name="basic" className="id-form" onSubmit={handleSubmit}>
+          <div className="char-count-wrapper">
+            <label htmlFor="name" className="teal-name-header">
+              Edit Name
+            </label>
+            <p className="char-count">{chars}/20</p>
+          </div>
+          <div className="name-input-wrapper">
+            <input
+              placeholder={name}
+              id="name"
+              className="name-input"
+              maxLength="20"
+              value={input}
+              onChange={handleOnChange}
+            />
+
+            <button className="id-btn" type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </Popup>
   );
