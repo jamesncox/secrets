@@ -6,6 +6,8 @@ export default function InfoModal({ id, name, setName }) {
   const [copySuccess, setCopySuccess] = useState(false);
   const [input, setInput] = useState("");
   const [chars, setChars] = useState(0);
+  const [open, setOpen] = useState(false);
+  const closeModal = () => setOpen(false);
 
   const handleOnChange = (e) => {
     setInput(e.target.value);
@@ -16,6 +18,8 @@ export default function InfoModal({ id, name, setName }) {
     e.preventDefault();
     if (input !== "") {
       setName(input.trim());
+      closeModal();
+      setInput("");
     }
   };
 
@@ -39,116 +43,115 @@ export default function InfoModal({ id, name, setName }) {
   };
 
   const Modal = () => (
-    <Popup
-      trigger={
-        <button className="info-btn">
-          <div className="info-wrapper">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="users-icon"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-              />
-            </svg>
-          </div>
-        </button>
-      }
-      modal
-    >
-      <div>
-        <div className="copy-id-wrapper">
-          <h3 className="room-id">Room ID</h3>
-          <button
-            className="copy-btn"
-            type="button"
-            aria-label={!copySuccess ? "To Copy" : "Copied Success"}
-            onClick={copyToClipBoard}
+    <>
+      <button className="info-btn" onClick={() => setOpen((o) => !o)}>
+        <div className="info-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="users-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            {!copySuccess ? (
-              <>
-                Copy
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="copy-icon"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                  />
-                </svg>
-              </>
-            ) : (
-              <>
-                <span className="copied-span">Copied!</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="copied-icon"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                  />
-                </svg>
-              </>
-            )}
-          </button>
-        </div>
-        <p className="id-text" ref={idRef}>
-          {id}
-        </p>
-        <form name="basic" className="id-form" onSubmit={handleSubmit}>
-          <div className="char-count-wrapper">
-            <label htmlFor="name" className="teal-name-header">
-              Edit Name
-            </label>
-            <p className="char-count">{chars}/20</p>
-          </div>
-          <div className="name-input-wrapper">
-            <input
-              placeholder={name}
-              id="name"
-              className="name-input"
-              maxLength="20"
-              value={input}
-              onChange={handleOnChange}
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
             />
+          </svg>
+        </div>
+      </button>
 
-            <button className="id-btn" type="submit">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+      <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+        <div>
+          <div className="copy-id-wrapper">
+            <h3 className="room-id">Room ID</h3>
+            <button
+              className="copy-btn"
+              type="button"
+              aria-label={!copySuccess ? "To Copy" : "Copied Success"}
+              onClick={copyToClipBoard}
+            >
+              {!copySuccess ? (
+                <>
+                  Copy
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="copy-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                    />
+                  </svg>
+                </>
+              ) : (
+                <>
+                  <span className="copied-span">Copied!</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="copied-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                    />
+                  </svg>
+                </>
+              )}
             </button>
           </div>
-        </form>
-      </div>
-    </Popup>
+          <p className="id-text" ref={idRef}>
+            {id}
+          </p>
+          <form name="basic" className="id-form" onSubmit={handleSubmit}>
+            <div className="char-count-wrapper">
+              <label htmlFor="name" className="teal-name-header">
+                Edit Name
+              </label>
+              <p className="char-count">{chars}/20</p>
+            </div>
+            <div className="name-input-wrapper">
+              <input
+                placeholder={name}
+                id="name"
+                className="name-input"
+                maxLength="20"
+                value={input}
+                onChange={handleOnChange}
+              />
+
+              <button className="id-btn" type="submit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </Popup>
+    </>
   );
   return Modal();
 }
