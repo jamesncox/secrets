@@ -413,6 +413,41 @@ textarea::placeholder {
   background: rgba(0, 0, 0, 0.75);
 }
 
+.copy-id-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copy-btn {
+  background-color: #03191e;
+  cursor: pointer;
+  border: none;
+  color: #59f8e8;
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.1rem;
+}
+
+.copy-btn:hover {
+  color: #f45b69;
+}
+
+.copy-icon {
+  height: 1.5rem;
+  margin-left: 0.25rem;
+}
+
+.copied-icon {
+  height: 1.5rem;
+  margin-left: 0.25rem;
+  color: #f45b69;
+}
+
+.copied-span {
+  color: #f45b69;
+}
+
 .room-id {
   color: #59f8e8;
   font-size: 1.5rem;
