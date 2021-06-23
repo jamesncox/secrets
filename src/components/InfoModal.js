@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import Popup from "reactjs-popup";
 
-export default function InfoModal({ id, name, setName }) {
+export default function InfoModal({ id, name, setName, setId }) {
   const idRef = useRef(null);
   const [copySuccess, setCopySuccess] = useState(false);
   const [input, setInput] = useState("");
@@ -42,6 +42,13 @@ export default function InfoModal({ id, name, setName }) {
     }, 2000);
   };
 
+  const signOut = () => {
+    localStorage.removeItem("secrets-app-id", id);
+    localStorage.removeItem("secrets-app-name", name);
+    setId("");
+    setName("");
+  };
+
   const Modal = () => (
     <>
       <button className="info-btn" onClick={() => setOpen((o) => !o)}>
@@ -64,7 +71,7 @@ export default function InfoModal({ id, name, setName }) {
       </button>
 
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
-        <div>
+        <div className="popup-content-wrapper">
           <div className="copy-id-wrapper">
             <h3 className="room-id">Room ID</h3>
             <button
@@ -116,7 +123,7 @@ export default function InfoModal({ id, name, setName }) {
             {id}
           </p>
           <form name="basic" className="id-form" onSubmit={handleSubmit}>
-            <div className="char-count-wrapper">
+            <div className="edit-name-wrapper">
               <label htmlFor="name" className="teal-name-header">
                 Edit Name
               </label>
@@ -149,6 +156,9 @@ export default function InfoModal({ id, name, setName }) {
               </button>
             </div>
           </form>
+          <button className="signout-btn" onClick={signOut}>
+            Leave Room
+          </button>
         </div>
       </Popup>
     </>

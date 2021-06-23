@@ -16,12 +16,10 @@ function App() {
     <div className="App">
       <Header />
       {id ? null : <RoomPortal setId={(id, setId)} />}
-      {(id && name === undefined) || name === "" ? (
-        <NamePortal setName={setName} id={id} />
-      ) : null}
-      {id && name !== "" && name !== undefined ? (
-        <ChatPortal id={id} name={name} setName={setName} />
-      ) : null}
+      {id && !name && <NamePortal setName={setName} id={id} />}
+      {id && name && (
+        <ChatPortal id={id} setId={setId} name={name} setName={setName} />
+      )}
       <SmallDotGrid />
       <LargeDotGrid />
     </div>
