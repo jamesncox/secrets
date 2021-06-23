@@ -419,6 +419,26 @@ textarea::placeholder {
   background: rgba(0, 0, 0, 0.75);
 }
 
+.close-popup-btn {
+  width: 3rem;
+  margin-left: auto;
+  margin-bottom: 1rem;
+  margin-right: -1rem;
+  margin-top: -0.5rem;
+  cursor: pointer;
+  background: #03191e;
+  border: none;
+  color: #a682ff;
+}
+
+.close-popup-btn:hover {
+  color: #f45b69;
+}
+
+.close-icon {
+  height: 2rem;
+}
+
 .copy-id-wrapper {
   display: flex;
   align-items: center;

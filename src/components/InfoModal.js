@@ -72,6 +72,22 @@ export default function InfoModal({ id, name, setName, setId }) {
 
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
         <div className="popup-content-wrapper">
+          <button className="close-popup-btn" onClick={closeModal}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="close-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
           <div className="copy-id-wrapper">
             <h3 className="room-id">Room ID</h3>
             <button

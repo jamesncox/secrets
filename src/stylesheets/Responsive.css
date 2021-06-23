@@ -48,6 +48,11 @@
     width: 25rem;
     padding: 2rem;
   }
+
+  .close-popup-btn {
+    margin-right: -2rem;
+    margin-top: -1.5rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
