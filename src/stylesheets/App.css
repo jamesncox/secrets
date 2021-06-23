@@ -226,7 +226,7 @@ input::placeholder {
 .message-form {
   width: 100%;
   margin-top: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .message-wrapper {
@@ -398,4 +398,90 @@ textarea::placeholder {
 .char-count {
   color: #59f8e8;
   font-size: 1.25rem;
+}
+
+/* modal styles */
+.popup-content {
+  background: #03191e;
+  border: 4px solid #a682ff;
+  width: 80%;
+  height: 30rem;
+  padding: 1rem;
+}
+
+.popup-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.copy-id-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copy-btn {
+  background-color: #03191e;
+  cursor: pointer;
+  border: none;
+  color: #59f8e8;
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.1rem;
+}
+
+.copy-btn:hover {
+  color: #f45b69;
+}
+
+.copy-icon {
+  height: 1.5rem;
+  margin-left: 0.25rem;
+}
+
+.copied-icon {
+  height: 1.5rem;
+  margin-left: 0.25rem;
+  color: #f45b69;
+}
+
+.copied-span {
+  color: #f45b69;
+}
+
+.room-id {
+  color: #59f8e8;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.edit-name-wrapper {
+  margin-top: 1rem;
+  margin-bottom: -0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signout-btn {
+  margin-top: auto;
+  width: 100%;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #59f8e8;
+  color: #03191e;
+  border-radius: 2px;
+  padding: 5px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.signout-btn:hover {
+  background-color: #f45b69;
 }
